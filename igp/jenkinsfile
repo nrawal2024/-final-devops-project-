@@ -7,7 +7,7 @@ pipeline
 		{
 			steps
 			{
-				git 'https://github.com/nrawal2024/-final-devops-project-.git'
+				git 'https://github.com/nrawal2024/igp.git'
 			}
 		}
 		
