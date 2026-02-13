@@ -1,0 +1,12 @@
+---
+- name: Deploy ABC Tech App
+  hosts: kubernetes
+  become: yes
+  tasks:
+    - name: Verify kubectl works
+      shell: kubectl get nodes --insecure-skip-tls-verify
+      register: nodes
+      
+    - name: Show cluster status
+      debug:
+        msg: "{{ nodes.stdout_lines }}"
